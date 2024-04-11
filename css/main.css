@@ -1,0 +1,106 @@
+* {
+  /*Including paddings and margins as a part of width and height values. To disable this, remove the forward slash at the end of this line.*/
+  box-sizing: border-box; /**/
+  /*Add a foward slash at the end of this line to display borders around every element in the page.*
+  border: 1px solid black; /**/
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.main-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 0%;
+  padding: 0%;
+  margin: 0%;
+  grid-template-columns: repeat(12, 1fr); /* create 12 columns, each with a width of ((container_width/12) - total gap or padding).*/
+  background-color: black;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  min-height: 50px;
+  margin: 0%;
+  padding: 0%;
+  grid-area: 1/1/1/13; /* Start from R1 C1, End before R1 C13*/
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: auto;
+  height: 60px;
+  margin-left: 2vw;
+}
+
+header nav {
+  margin-right: 2vw;
+}
+
+header ul li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 2vw;
+}
+
+main {
+  width: 100%;
+  grid-area: 2/1/2/13; /* Start from R2 C1, End before R2 C13*/
+  background-color: white;
+}
+
+.intro1 {
+  height: 90vh;
+  min-height: 320px;
+}
+
+footer {
+  width: 100%;
+  height: 20vh;
+  min-height: 100px;
+  grid-area: 3/1/3/13; /* Start from R3 C1, End before R3 C13*/
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foo-left {
+  margin-left: 2vw;
+}
+
+.foo-left ul {
+  padding: 0px;
+}
+
+.foo-left ul li {
+  list-style-type: none;
+  padding-top: .5vw;
+}
+
+.foo-right {
+  margin-right: 2vw;
+}
+
+.foo-right img {
+  width: auto;
+  height: 100px;
+}

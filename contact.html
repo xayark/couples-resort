@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template</title>  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <script src="./js/main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="hidden">Description</h1>
+    <header id="main-header" class="grid-con">
+      <div id="header-wrapper">
+      <div id="logo">
+        <img src="images/couples_resort_logo.svg" alt="Couples Resort Logo">
+      </div>
+      <nav id="main-nav">
+        <h2 class="hidden">Main Navigation</h2>
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger">
+        <img src="images/burger.svg" alt="hamburger menu icon">
+        </label>
+        <div id="burger-con">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    </header>
+    <main class="grid-con">
+      <div id="main-overlay" class="col-start-4">
+        <div id="ovwrapper">
+        <div id="toTop" onclick="toTop()">
+          <img src="./images/Top.png">
+        </div>
+        <div id="book-now">
+          <h3><a href="booking.html">Book Now</a></h3>
+        </div>
+      </div>
+      </div>
+
+      <section id="contact-section" class="col-span-full fh-container">
+        <div class="form-wrapper">
+        <div class="form-container">
+          <h1 class="sanchez">How can we help you?</h1>
+          <form id="contact-form">
+            <div class="form-field">
+              <textarea id="question" name="question" rows="5" placeholder="Your Question" required></textarea>
+            </div>
+            <div class="form-field">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-field">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+          </form>
+        </div>
+        <button id="submit-btn">Submit</button>
+        </div>
+      </section>
+
+      <section id="contact-info" class="col-span-full fh-container">
+        <div class="contact-info-overlay">
+          <h1 class="sanchez">Couples Resort</h1>
+          <p>139 Galeairy Lake Rd,<br>Whitney<br>Algonquin Park, ON<br>K0J 2MO</p>
+          <div id="hl-contact" class="hyperlink">
+            <h3>Directions</h3>
+            <img src="./images/arrow.svg" id="hla-contact" class="hlarrow">
+          </div>
+          <p>info@couplesresort.ca<br>1 866 202-1179</p>
+        </div>
+      </section>
+
+      <section class="col-span-full weather-section">
+        <div class="weather-content">
+          <h1 class="sanchez">Weather</h1>
+          <h3>For current weather and info, go to:</h3>
+          <div class="weather-links">
+            <div id="hl-contact" class="hyperlink hlx">
+              <h3>The Weather Network Whitney Ontario</h3>
+              <img src="./images/arrow.svg" id="hla-contact" class="hlarrow">
+            </div>
+            <div id="hl-contact" class="hyperlink hlx">
+              <h3>Accuweather Whitney Ontario</h3>
+              <img src="./images/arrow.svg" id="hla-contact" class="hlarrow">
+            </div>
+          </div>
+        </div>
+      </section>      
+      <section class="col-span-full directions-section">
+        <div class="directions-content">
+          <h1 class="sanchez">Directions</h1>
+          <h3>To get directions,<br>
+            Enter your address,<br>
+            city and province or state<br>
+            and get google maps directions.</h3>
+          <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button><img src="images/search.svg" alt="Search"></button>
+          </div>
+          <div class="map-box"></div>
+        </div>
+      </section>
+      <section class="col-span-full limo-services-section">
+        <div class="limo-services-content">
+          <h1 class="sanchez">Limo Services</h1>
+          <h1 class="sanchez">(Extra Cost)</h1>
+          <div id="hl-contact" class="hyperlink hlx">
+            <h3>Atrium Executive Limousine</h3>
+            <img src="./images/arrow.svg" id="hla-contact" class="hlarrow">
+          </div>
+          <h3 class="bahnschrift">1-888-280-LIMO (5466)</h3>
+          <div id="hl-contact" class="hyperlink hlx">
+            <h3>Luxury Coach</h3>
+            <img src="./images/arrow.svg" id="hla-contact" class="hlarrow">
+          </div>
+          <h3 class="bahnschrift">1-888-589-8795</h3>
+        </div>
+      </section>
+      
+
+
+    </main>
+    <footer id="footer-hero" class="grid-con">
+      <div id="footer-ov"></div>
+      <section id="footer-contact-info" class="col-span-full">
+          <h3>Couples Resort</h3>
+          <p>139 Galeiry Lake Rd<br>
+              Whitney - Algonquin Park, ON <br>
+              K0J 2MO
+          </p>
+          <p>
+              Toll Free:+1 866 202-1179<br>
+              E-mail: info@coupleresort.com
+          </p>
+      </section>
+      <div id="footer-privacy" class="col-span-full line-separator">
+          <p id="price-policy">All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing.<br><br>
+            ©2013 Couples Resort Inc. All Rights Reserved. Privacy Policy</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

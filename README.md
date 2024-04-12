@@ -1,13 +1,9 @@
 ## Couples Resort
-
+FIP submission of Dhruv Dave
 
 
 ## Getting Started
-
-
-
-### Prerequisites
-
+The Adobe XD files can be found in assets folder, thankyou!
 
 
 ### Installation

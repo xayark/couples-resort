@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <script src="./js/main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="hidden">Description</h1>
+    <header id="main-header" class="grid-con">
+      <div id="header-wrapper">
+      <div id="logo">
+        <img src="images/couples_resort_logo.svg" alt="Couples Resort Logo">
+      </div>
+      <nav id="main-nav">
+        <h2 class="hidden">Main Navigation</h2>
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger">
+        <img src="images/burger.svg" alt="hamburger menu icon">
+        </label>
+        <div id="burger-con">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    </header>
+    <main class="grid-con">
+      <div id="submit-overlay" class="col-span-full" onclick="hideBookFail()"></div>
+      <div id="main-overlay" class="col-start-4 hidden">
+        <div id="ovwrapper">
+        <div id="toTop" onclick="toTop()">
+          <img src="./images/Top.png">
+        </div>
+        <div id="book-now">
+          <h3><a href="booking.html">Book Now</a></h3>
+        </div>
+      </div>
+      </div>
+      <section id="book-intro" class="col-span-full fh-container">
+        <div class="booking-info">
+          <h3>Welcome to our secure server:</h3>
+          <p>Use the reservation system to check the current rates for your stay.<br>
+            To help you better : Food Allergies - Please enter the type of food allergy.<br>
+            Our rooms have down duvet and pillows, if allergic to feathers indicate if both are to be removed or just the pillows.</p>
+        </div>
+          <form class="book-content" id="booking-form" action="#" method="post" onsubmit="return validateForm(event)">
+            <h1 class="sanchez">Check Availability</h1>
+            <h4>Please begin with tommorrow's date, 24h booking is not possible.</h4>
+            <div class="selector">
+              <label class="sanchez" for="arrival">Arrive at</label>
+              <input type="date" id="arrival" name="arrival" required>
+            </div>
+            <div class="selector">
+              <label class="sanchez" for="nights">Nights</label>
+              <select id="nights" name="nights" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+              </select>
+            </div>
+            <div class="selector">
+              <label class="sanchez" for="guests">Guests</label>
+              <select id="guests" name="guests" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+            <button id="check-btn" type="submit" class="sanchez">Check</button>
+          </form>
+        <div id="book-fail">
+          <div>
+            <p>We're sorry but all rooms are currently booked!<p>
+          </div>
+          <img src="images/waiter.svg" alt="no rooms available">
+        </div>
+      </section>
+      <section id="offers" class="col-span-full fh-container">
+        <div class="offers">
+          <h1 class="sanchez">OFFERS</h1>
+          <p>ALL-Inclusive Gourmet Dining & 5-Star Luxury. Come Escape and Relax.<br>
+            65% OFF, 2 nights from $156/p/n + taxes, with All-Inclusive Gourmet Dining!<br>
+            Romantic Wood Burning Fireplace & Private Hot Tub with all Cabins and Jr Suites.<br>
+            NOW thru FALL COLOURS. Prices are On-Line! Book Now, secure your Escape!</p><br>
+          <p class="sanchez">FREE NOW:</p>
+          <p>FULL Summer Program is NOW all available, except Heated Pool which opens May 18th.<br>
+            Canoes and Small Motorboats<br>
+            Tennis and Pickle Ball Court and Basketball<br>
+            Algonquin Park Endless Walking and Hiking with Algonquin Pass.<br>
+            Algonquin Park Museums. Billiards Room. Gym and Sauna Room.<br>
+            Mountain Bikes for the Rail Trail.</p><br>
+          <p class="sanchez">ALL-INCLUSIVE:</p>
+          <p>5-STAR CLASSIC DINING ROOM with a 5-COURSE GOURMET DINNER!<br>
+            DINNER = DINING ROOM or you can still do Gourmet Room-Service!<br>
+            Dress Code in effect. Couples Dress up, men wear a Jacket or collared shirt. No Hats.<br>
+            See web site and Facebook for meal samples and pics.<br>
+            We Cook Fresh and to Order. We Cater to All food diets/allergies.<br></p><br>
+            <p class="sanchez">BREAKFAST IN BED!</p>
+          <p>LOOK for Extra Nights for Extra Big Discounts & Sometimes FREE!!!<br>
+            FREE NIGHTS see our WebSite LastMinuteDeals Tab under Packages</p><br>
+          <p class="sanchez">COUPLES STAY CONNECTED! VALENTINE`S EVERY DAY!</p>
+        </div>
+      </section>
+      <section id="book-info-extra" class="col-span-full">
+          <div class="inf-content">
+            <h1 class="sanchez">Reservations & Booking Information</h1>
+            <div class="inf-section">
+              <h2>Location</h2>
+              <p>Couples Resort<br>
+                139 Galeairy Lake Road<br>
+                Whitney, Ontario, Canada, K0J 2M0<br>
+                1-866-202-1179</p>
+            </div>
+            <div class="inf-section">
+              <h2>Booking Requirements - Change Date Fees - Cancellation Fees</h2>
+              <p>POLICIES: **You will not be signing a registration upon arrival. You will be accepting your invoice and paying upfront for your stay in advance and taking full responsibility for any and all charges made during your stay. We are strictly a NO-TIPPING RESORT therefore NO tipping allowed nor expected. All prices are quoted in Canadian Dollars. We accept Debit Card, Visa, MasterCard, American Express and Cash (NO Cheques). Rates are guaranteed at time of booking with deposit, Plus 13% Harmonized Sales Tax. Check in time is around 4 pm-5 pm Check out time is 11 am Sorry no pets allowed. No Smoking nor Vaping inside any accommodation. Please be aware that we are a Destination Resort and Not a Hotel and that the Following Deposits, Change Date Fees and Cancellation Fees must Apply:</p>
+              <p>DEPOSITS: $500 Required on Booking an accommodation.</p>
+              <p>WE ABSOLUTELY DO NOT REQUEST OR ACCEPT EMAIL TRANSFERS</p>
+              <h3>GUEST CANCELLATION and CHANGE DATE FEES:</h3>
+              <p>1. $200 Administration Fee will be charged to Change Dates and to Cancellations, Absolutely No Exceptions. There is a 24 hour delay, from booking time, before Fee takes effect.</p>
+              <p>2. CHARGED FULL 1 NIGHTS ACCOMMODATION to GUEST who DO NOT Show up on Arrival Date, and did not prior Change Date or Prior Cancel.</p>
+              <p>3. NO REFUND will be given for shortened Resort stays.</p>
+              <h3>EXTRA FEES:</h3>
+              <p>13% HST TAX, Lunches, Extra food, Spa Treatments (however, repeat guests receive 2 free 1/2 treatments if here in the last 2 years), Horse Riding (seasonal), 20/30/40 hpr Italian Deck Boat(s), Drinks from the Bar, Store, Parking $20/Night. Spa Products.</p>
+              <h3>GUARANTEE:</h3>
+              <p>We aim to please. If at any time you need our help, please ask for immediate assistance. We are very fast at fixing what is broken or not right, usually we are always successful.</p>
+            </div>
+            <div class="inf-section">
+              <h2>Property Policy</h2>
+              <p>Front Desk office hours are 8:30 am to 10:00 pm. Fiber-Optic $$$$ Internet Feeds this remote Resort, currently we provide it Free. Cell phone coverage is also available in our area.</p>
+              <p>Breakfast: 8:30 am to 10:30 am - Please reserve a room service time. Lunch: 12:00 pm to 4:00 pm - Served/Take out/Room Service. Dinner: Please reserve a Table or Room Service time by calling Extension 108 between 1:00 pm - 5:00 pm the day of your arrival.</p>
+              <p>All Accommodations have Hot Tubs: Resort Policy for your Health Protection is that Hot Tub Chemical Testing is done daily in your Hot Tub, regardless of signage you hang at your door.</p>
+              <p>Cleaning will occur between 9 am and mid-afternoon. The cleaning card MUST be displayed on your outside door handle or in the plastic holder for housekeeping.</p>
+              <p>Business Services are available - Inquire at Front Desk.</p>
+              <p>Please no disturbing music around the lake front or from your private deck.</p>
+              <p>Keep rooms quiet after 12 midnight.</p>
+              <p>No Pets Allowed.</p>
+              <p>All rooms are non-smoking and non-vaping. There are ashtrays provided for smokers located on the balcony or patio. There will be a $300 surcharge applied, if you are smoking or vaping or leaving Cannabis in your accommodation. Leave Cannabis in your vehicle as it is known to stink up the accommodation. During the Spring, Summer and Fall there are Firepits set up by the lake for those that indulge, to enjoy.</p>
+              <p>All Damages to Accommodations and facilities are the guest's responsibility!</p>
+              <p>Please give privacy & respect to homes & cottages on the lake and on the Resort. Do Not Trespass. TIPPING and GRATUITY ADVICE If you feel you really must tip or leave a gratuity, then we encourage you to tell the amazing staff and the World on TripAdvisor or Yelp or Google Reviews or Facebook as they, the staff, love to read it. Your action will affect them both emotionally positively and financially positively as it will help their "joy of the day" and their careers as they move forward in life.</p>
+            </div>
+            <div class="inf-section">
+              <h2>POWER OUTAGE POLICY</h2>
+              <p>Power Outage Policy was introduced due to outage in winter 2009, the first time in 42 years that the resort had to shut down due to a power outage. Currently in a Power Outage we can Provide the Following Services:</p>
+              <ol>
+                <li>Wood burning fireplace in all Accommodations; for Romance ( Possibly # 1 Reason Guests stay with us)</li>
+                <li>Fully operational Kitchen; Gourmet Dining (Possible also the #1 Reason Guests stay with us)</li>
+                <li>Cold running water in all Accommodations</li>
+                <li>Hot and Cold Showers in the Gym/Sauna Facilities</li>
+                <li>Recreation Room with Big TV for the Vital Game (Much lower on the list of reasons to stay with us...but May be critical)</li>
+                <li>Office has access to the outside world with Phone and Data Line services</li>
+                <li>We Apologize that all the Toys in your Accommodation, and the Pool/Hot Tub will Not be operational</li>
+              </ol>
+              <ul>
+                <li>We will try to update the home page of our website to tell when we are up again.</li>
+                <li>If there is a power outage we will try to notify guests. If we are successful the deposit will be refunded if desired.</li>
+                <li>If guests arrive or if a power outage happens while guests are here, we will offer:</li>
+                <ul>
+                  <li>If power goes out for two hours between 4pm and 11pm: 10% off</li>
+                  <li>If power goes out for three hours between 8pm and 11pm: 20% off</li>
+                  <li>If power goes out for four hours between 7pm and 11pm: 30% off</li>
+                  <li>If power goes out for five hours between 6pm and 11pm: 35% off and one free night stay in the future, similar accommodation</li>
+                  <li>Power outages after 11pm through to 4pm will have no discount attached.</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="inf-section">
+              <h2>Revisions to This Policy</h2>
+              <p>The Couples Resort reserves the right to revise, amend, or modify this policy, our Internet Service Agreement and our other policies and agreements at any time and in any manner. Notice of any revision, amendment, or modification will be posted in accordance with the Internet Service Agreement.</p>
+              <h2>Where to Direct Questions About The Couples Resort's Privacy Policy</h2>
+              <p>If you have any questions about this Privacy Policy or the practices described herein, you may contact:<br>
+              Attention: John Sorensen<br>
+              Couples Resort<br>
+              P. O. Box 310<br>
+              139 Galeairy Lake Road<br>
+              Whitney - Algonquin Park, ON K0J 2M0<br>
+              Canada</p>
+            </div>
+          </div>
+      </section>
+    </main>
+    <footer id="footer-hero" class="grid-con">
+      <div id="footer-ov"></div>
+      <section id="footer-contact-info" class="col-span-full">
+          <h3>Couples Resort</h3>
+          <p>139 Galeiry Lake Rd<br>
+              Whitney - Algonquin Park, ON <br>
+              K0J 2MO
+          </p>
+          <p>
+              Toll Free:+1 866 202-1179<br>
+              E-mail: info@coupleresort.com
+          </p>
+      </section>
+      <div id="footer-privacy" class="col-span-full line-separator">
+          <p id="price-policy">All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing.<br><br>
+            ©2013 Couples Resort Inc. All Rights Reserved. Privacy Policy</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

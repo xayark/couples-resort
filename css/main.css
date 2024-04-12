@@ -1,106 +1,548 @@
-* {
-  /*Including paddings and margins as a part of width and height values. To disable this, remove the forward slash at the end of this line.*/
-  box-sizing: border-box; /**/
-  /*Add a foward slash at the end of this line to display borders around every element in the page.*
-  border: 1px solid black; /**/
+/*------------------------------*/
+/*---------- FAQ -------------*/
+
+main #faq-intro {
+  background-image: url(../images/woman.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  /*background-attachment: fixed;*/
 }
 
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.hidden {
-  display: none;
-}
-
-.main-grid {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  gap: 0%;
-  padding: 0%;
-  margin: 0%;
-  grid-template-columns: repeat(12, 1fr); /* create 12 columns, each with a width of ((container_width/12) - total gap or padding).*/
-  background-color: black;
-}
-
-header {
-  width: 100%;
-  height: 10vh;
-  min-height: 50px;
-  margin: 0%;
-  padding: 0%;
-  grid-area: 1/1/1/13; /* Start from R1 C1, End before R1 C13*/
-  background-color: black;
+main #faq-intro #intro-content {
+  background-color: rgba(0, 0, 0, .4);
+  height: 90vh;
   color: white;
-  overflow: hidden;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
-header img {
-  width: auto;
-  height: 60px;
-  margin-left: 2vw;
+main #faq-intro h1 {
+  margin: 20px;
 }
 
-header nav {
-  margin-right: 2vw;
+main #faq-intro #intro-content #jump {
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-header ul li {
-  display: inline;
-  list-style-type: none;
-  padding-right: 2vw;
+main #faq-intro #intro-content #jump #hl-faq {
+  margin-top: 10px;
 }
 
-main {
-  width: 100%;
-  grid-area: 2/1/2/13; /* Start from R2 C1, End before R2 C13*/
+#faq {
+  background-color: #fafafa;
+  height: fit-content;
+}
+
+#faq #wrapper {
+  border: 10px solid #fafafa;
+  border-radius:40px;
   background-color: white;
 }
 
-.intro1 {
-  height: 90vh;
-  min-height: 320px;
+#faq #wrapper div {
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 5px;
+  scroll-margin: 100px;
 }
 
-footer {
-  width: 100%;
-  height: 20vh;
-  min-height: 100px;
-  grid-area: 3/1/3/13; /* Start from R3 C1, End before R3 C13*/
-  background-color: black;
-  color: white;
-  overflow: hidden;
+#faq #wrapper div span:first-child {
+  font-size: 1.2rem;
+}
+
+#faq #wrapper div:last-child {
+  margin-bottom: 25px;
+}
+
+#faq #wrapper div #content {
+  font-size: .8rem;
+}
+
+/*------------------------------*/
+/*---------- booking -------------*/
+
+#book-intro {
+  background-image: url(../images/hallway.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.foo-left {
-  margin-left: 2vw;
+.book-content {
+  background-color: rgba(0, 0, 0, .6);
+  border-radius: 10px;
+  width: 75%;
+  color: white;
+  padding: 20px;
+  margin: auto;
+  margin-top: 25px;
 }
 
-.foo-left ul {
-  padding: 0px;
+.book-content h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
 }
 
-.foo-left ul li {
-  list-style-type: none;
-  padding-top: .5vw;
+.book-content h4 {
+  margin-bottom: 20px;
 }
 
-.foo-right {
-  margin-right: 2vw;
+.book-content .selector {
+  margin-bottom: 20px;
 }
 
-.foo-right img {
+.book-content .selector label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.book-content .selector input, select {
+  font-size: 1rem;
+}
+
+.book-content .selector input, select {
+  border-radius: 2px;
   width: auto;
-  height: 100px;
+  height: 30px;
+  background-color: white;
 }
+
+#check-btn {
+  margin-top: 0px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #9a2018;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#check-btn:hover {
+  background-color: #d82323;
+}
+
+.booking-info {
+  align-self: center;
+  color: white;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.booking-info h3 {
+  font-size: 1rem;
+}
+
+.booking-info p {
+  font-size: .65rem;
+}
+
+#submit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent black background */
+  z-index: 1; /* Ensure overlay is below book-fail */
+  display: none; /* Initially hidden */
+}
+
+#book-fail {
+  bottom: -3px;
+  transform: translateX(-30px);
+  display: none; /* initially hide */
+  position: absolute;
+  z-index: 2;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-30px) translateY(100%);
+  }
+  100% {
+    transform: translateX(-30px) translateY(0%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#book-fail.show {
+  display: block; /* Show when it has the "show" class */
+  animation: slideIn 0.5s forwards; /* Animate slide in */
+}
+
+#submit-overlay.show {
+  display: block; /* Show when it has the "show" class */
+  animation: fadeIn 0.5s forwards; /* Animate slide in */
+}
+
+#book-fail img {
+  height: 80px;
+  width: auto;
+  filter: invert(100%);
+}
+
+#book-fail div {
+  width: 280px;
+  height: auto;
+  margin: 0px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  transform: translateX(70px) translateY(25px);
+  -webkit-text-stroke: .05rem white;
+}
+
+#offers {
+  height: fit-content;
+}
+
+.offers h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  height: fit-content;
+}
+
+.offers {
+  margin: 20px 0px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 10px 55px;
+  font-size: .9rem;
+  height: fit-content;
+}
+
+.offers h3 {
+  font-family: 'Sanchez', 'Times New Roman', serif;
+}
+
+.book-info-extra {
+  height: fit-content;
+}
+
+.inf-content {
+  height: fit-content;
+  margin-bottom: 10px;
+  margin: 20px 0px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  padding: 10px 55px;
+  font-size: .9rem;
+}
+
+.inf-content h1 {
+  margin-bottom: 20px;
+  height: fit-content;
+}
+
+.inf-section {
+  height: fit-content;
+  margin-bottom: 30px;
+}
+
+.inf-section h2 {
+  font-family: 'Sanchez', 'Times New Roman', serif;
+  margin-top: 20px;
+}
+
+.inf-section p {
+  font-size: .7rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.inf-section ul, ol {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.inf-section li {
+  margin-bottom: 5px;
+}
+
+/*------------------------------*/
+/*---------- CONTACT -------------*/
+
+
+#contact-section {
+  background-image: url('../images/man_cup.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 58%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-section .form-wrapper {
+width: 80%;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+#contact-section .form-wrapper .form-container {
+  background-color: white;
+  width: 100%;
+  max-width: 412px; /* Adjust as needed */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-section h1 {
+  font-family: 'Sanchez', 'Times New Roman', serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#contact-section form {
+  width: 100%;
+}
+
+#contact-section form .form-field {
+  margin-bottom: 20px;
+}
+
+#contact-section form input[type="text"],
+#contact-section form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+#contact-section form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+#contact-section #submit-btn {
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #9a2018;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact-section #submit-btn:hover {
+  background-color: #d82323;
+}
+
+#contact-section #submit-btn:focus,
+#contact-section #submit-btn:focus + #submit-btn {
+  width: 100%;
+  background-color: green;
+}
+
+#contact-info {
+  background-image: url('../images/map_car.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60%;
+  position: relative;
+}
+
+.contact-info-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.contact-info-overlay h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.contact-info-overlay p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.contact-info-overlay p:first-of-type {
+  margin-bottom: 40px;
+}
+
+.contact-info-overlay p:last-of-type {
+  margin-top: 40px;
+}
+
+
+.weather-section {
+  background-color: white;
+}
+
+.weather-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.weather-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.weather-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.weather-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-links h3 {
+  color: white;
+}
+
+.weather-links h3:first-of-type {
+  font-size: 15px;
+}
+
+.hlx {
+  filter: invert(100%);
+}
+
+#hl-contact {
+  margin-bottom: 10px;
+}
+
+.directions-section {
+  background-color: rgb(247, 247, 247);
+}
+
+.directions-content {
+  padding: 20px;
+}
+
+.directions-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-bar button img {
+  height: 35px;
+  width: auto;
+}
+
+.map-box {
+  width: 100%;
+  height: 300px;
+  background-image: url('../images/map.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.limo-services-section {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.limo-services-content {
+  padding-bottom: 200px;
+}
+
+.limo-services-content h1 {
+  font-size: 3rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.limo-services-content > h3 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.limo-services-section:hover::after {
+  content: url('../images/car.svg');
+  position: absolute;
+  animation: slideIn 0.5s forwards;
+  bottom: 0;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100vw); }
+  to { transform: translateX(0); }
+}
+
+
+/*------------------------------*/
+/*------------------------------*/

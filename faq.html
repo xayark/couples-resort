@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template</title>  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <script src="./js/main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="hidden">Description</h1>
+    <header id="main-header" class="grid-con">
+      <div id="header-wrapper">
+      <div id="logo">
+        <img src="images/couples_resort_logo.svg" alt="Couples Resort Logo">
+      </div>
+      <nav id="main-nav">
+        <h2 class="hidden">Main Navigation</h2>
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger">
+        <img src="images/burger.svg" alt="hamburger menu icon">
+        </label>
+        <div id="burger-con">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    </header>
+    <main class="grid-con">
+      <div id="main-overlay" class="col-start-4">
+        <div id="ovwrapper">
+        <div id="toTop" onclick="toTop()">
+          <img src="./images/Top.png">
+        </div>
+        <div id="book-now">
+          <h3><a href="booking.html">Book Now</a></h3>
+        </div>
+      </div>
+      </div>
+      <div id="faq-intro" class="col-span-full fh-container">
+        <div id="intro-content">
+        <h1>Hi There!<br>What would you like to know about?</h1>
+        <div id="jump">
+          <div id="hl-faq" class="hyperlink" onclick="faqFood()">
+            <h3>Food</h3>
+            <img src="./images/arrow.svg" id="hla-faq" class="hlarrow"></img>
+          </div>
+          <div id="hl-faq" class="hyperlink" onclick="faqPackages()">
+            <h3>Packages</h3>
+            <img src="./images/arrow.svg" id="hla-faq" class="hlarrow"></img>
+          </div>
+          <div id="hl-faq" class="hyperlink" onclick="faqAmenities()">
+            <h3>Amenities</h3>
+            <img src="./images/arrow.svg" id="hla-faq" class="hlarrow"></img>
+          </div>
+          <div id="hl-faq" class="hyperlink" onclick="faqActivities()">
+            <h3>Activites</h3>
+            <img src="./images/arrow.svg" id="hla-faq" class="hlarrow"></img>
+          </div>
+          <div id="hl-faq" class="hyperlink" onclick="faqPets()">
+            <h3>Pets</h3>
+            <img src="./images/arrow.svg" id="hla-faq" class="hlarrow"></img>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div id="faq" class="col-span-full">
+        <div id="wrapper">
+          <div id="meals">
+            <span>Are meals included in the price?</span>
+            <br/><span id="content">A 5 course gourmet dinner and breakfast are included in the prices. Lunch we offer from 12 noon to 4:00pm at an additional charge, or eat while you are out and about.</span>
+          </div>
+          <div id="tipping">
+            <span>Is Tipping Required?</span>
+            <br/><span id="content">We are an All-Inclusive Reswort, so Tipping is in the Prices. We wish that you would rather indulge in another Spa appointment, participate in one more sport activity, have another delicious bottle of wine, spoil oneself with extending the stay another night, come back again during the next year, or tell a friend(s) about us.....any of these will help all of the Resort's working team (many of the Team have been here 10 to 30 years), far more than tipping would. This Policy insures that we can provide better quality service throughout the Resort for years to come, thank you.</span>
+          </div>
+          <div id="pets">
+            <span>Do you accept Pets?</span>
+            <br/><span id="content">We do not accept pets of any kind. However ask your Doctor for a "Certificate for a Therapy Pet" and then you can take and do what you wish in Ontario with your Pet, I understand many Doctors provide them easily.   The Adventure Lodge www.AdventureLodge.com which is about 4 km away from us, accepts pets. Adventure Lodge prices also include Dinner and Breakfast and we recommend them for an Authentic Canadian Experience,,,,Rustic 0-Star, yet Luxurious!</span>
+          </div>
+          <div id="checkin">
+            <span>What is your Check in and Check out times?</span>
+            <br/><span id="content">Check in time is 4 pm - 5 pm and check out is at 11 am. You will not be signing a registration upon arrival. You will be accepting your invoice and paying upfront for your stay in advance and taking full responsibility for any and all charges made during your stay.</span>
+          </div>
+          <div id="all-inclusive">
+            <span>What does all-inclusive Mean?</span>
+            <br/><span id="content">Confirmation Price Includes: Rooms rates and all Government Taxes.  A 5 course gourmet dinner and breakfast are included in the prices. All-Inclusive means Tipping is included. A variety of sports equipment is provided at no extra charge<br/><br/>Note:<br/>See packages page for other charges that may apply not found on your confirmation email.<br/>See Booking Page for Cancellation, Reservations & Booking information policies.</span>
+          </div>
+          <div id="amenities">
+            <span>What Amenities are in the Rooms?</span>
+            <br/><span id="content">To view Amenities chart click here.</span>
+          </div>
+          <div id="internet">
+            <span>Is there internet available?</span>
+            <br/><span id="content">Yes. FREE High Speed, plenty enough for streaming NETFLIX and working on VPN's.<br/>NEW as of January 1st 2018 we are running Fiber-Optics to the Resort. <br/>We are the only Resort in Canda running Direct Fiber-Optic connectivity, at a cost to the Resort of over $100,000 per year, for you, please enjoy!</span>
+          </div>
+          <div id="EV_CHargers">
+            <span>Do you have EV CHargers?</span>
+            <br/><span id="content">Yes, we have 8 Level 2 Charging Stations<br/>3 Tesla destination chargers by reception plus 1 J1772 hidden behind the third Tesla destination.<br/>Upper parking lot there is a stand-alone dual J1772 as well as a Chargepoint dual J1772. No Fees</span>
+          </div>
+          <div id="outdoor_pool">
+            <span>When is the outdoor pool open?</span>
+            <br/><span id="content">Outdoor Thermal Saltwater Pool<br/>Open May long weekend untill Labour Day or weather depending into late September.</span>
+          </div>
+          <div id="reach">
+            <span>How do I get to The Couples Resort?</span>
+            <br/><span id="content">To get directions, click here.</span>
+          </div>
+          <div id="weather">
+            <span>What's the weather forecast?</span>
+            <br/><span id="content">You can find out what the weather forecast is by clicking here.</span>
+          </div>
+          <div id="moose">
+            <span>Where are the moose?</span>
+            <br/><span id="content">Algonquin Park has thousands of moose. The best chance of spotting a moose is along the highway 60 corridor running through Algonquin. The moose are not generally afraid of tourists, and will continue to eat along side the road. (DO NOT APPROACH A MOOSE!) Moose are most frequent through May and June when road salt from the winters roads wash into the neighbouring ditches. Moose consider salt to be a treat, especially when mixed with their greens. In the foliage months, taking a very early hike on the Mizzy Lake Trail also can be rewarding. Moose become rare to see in the winter months.</span>
+          </div>
+          <div id="thermal-salt-water">
+            <span>Why Thermal salt-water pool?</span>
+            <br/><span id="content">Purely for enjoyment; we want everyone to use it. The Thermal Pool uses the Sun to heat it and they both use an electro-plate to break basic table salt into the compounds used to kill bacteria, similar to chlorine, without any of the side effects. There is no smell, it tastes a little salty and is more like a saline solution, so you can open your eyes under water and it will not irritate them. There is no chemical reaction to the skin, hair or swimsuits. You will actually feel smoother after your shower.</span>
+          </div>
+          <div id="sport-centre">
+            <span>What are the Sport Centre Hours?</span>
+            <br/><span id="content">Daily 8:30 am to 4:30 pm.</span>
+          </div>
+          <div id="buy">
+            <span>Where can i Buy your Products?</span>
+            <br/><span id="content">Buy Canadian Made "Marshal Mattress" Natural Euro Top Beds HERE<br/>Buy Feather Down Pillows, Feather Matress Toppers, Feather Duvets HERE<br/>Buy Organic Towels, Linens, Silk Duvets, Buckwheat (no wool) Pillows and Kapok Pillows HERE</span>
+          </div>
+          <div id="bear-trail">
+            <span>The "Bear Trail" Dining Room at Couples Resort, Algonquin Park:</span>
+            <br/><span id="content">Recognized by Savour Canada as a significant contributor to buying Ontario Food Products.<br/>We produce vegetable food products on site.<br/>All organic kitchen waste is composted and used in our gardens.<br/>No pesticides are used in our vegetable gardens or flower gardens.</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer-hero" class="grid-con">
+      <div id="footer-ov"></div>
+      <section id="footer-contact-info" class="col-span-full">
+          <h3>Couples Resort</h3>
+          <p>139 Galeiry Lake Rd<br>
+              Whitney - Algonquin Park, ON <br>
+              K0J 2MO
+          </p>
+          <p>
+              Toll Free:+1 866 202-1179<br>
+              E-mail: info@coupleresort.com
+          </p>
+      </section>
+      <div id="footer-privacy" class="col-span-full line-separator">
+          <p id="price-policy">All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing.<br><br>
+            ©2013 Couples Resort Inc. All Rights Reserved. Privacy Policy</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
